@@ -11,6 +11,7 @@ import android.widget.Spinner;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
-
+    EditText entrada, salida;
+    Spinner spinner1, spinner2;
 
 }
