@@ -133,4 +133,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         double fahrenheit = rankine - 459.67;
         return fahrenheit;
     }
+    public double rankineToKelvin(double rankine) {
+        double kelvin = rankine/ 1.8;
+        return kelvin;
+    }
 }
