@@ -94,5 +94,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         double fahrenheit = (celsius * 1.8) + 32;
         return fahrenheit;
     }
-
+    public double celsiusToKelvin(double celsius) {
+        double kelvin = celsius + 273.15;
+        return kelvin;
+    }
 }
