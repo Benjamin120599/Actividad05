@@ -89,7 +89,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public void onNothingSelected(AdapterView<?> parent) {
 
     }
-
     public double celsiusToFahrenheit(double celsius) {
         double fahrenheit = (celsius * 1.8) + 32;
         return fahrenheit;
@@ -105,5 +104,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public double fahrenheitToCelsius(double fahrenheit) {
         double celsius = (fahrenheit - 32) / 1.8;
         return celsius;
+    }
+    public double fahrenheitToKelvin(double fahrenheit) {
+        double kelvin = ( (fahrenheit - 32) / 1.8 ) + 273.15;
+        return kelvin;
     }
 }
