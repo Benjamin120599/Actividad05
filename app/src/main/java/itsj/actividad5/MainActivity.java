@@ -30,7 +30,60 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         spinner2 = findViewById(R.id.spinner2);
         spinner2.setOnItemSelectedListener(this);
         spinner2.setAdapter(adaptador);
-
     }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+        double grado = Double.parseDouble(entrada.getText().toString());
+        double res;
+
+        if(spinner1.getSelectedItem().toString().equals("Centigrados") && spinner2.getSelectedItem().toString().equals("Fahrenheit")) {
+            res = celsiusToFahrenheit(grado);
+            salida.setText(res+"");
+        } else if(spinner1.getSelectedItem().toString().equals("Centigrados") && spinner2.getSelectedItem().toString().equals("Kelvin")) {
+            res = celsiusToKelvin(grado);
+            salida.setText(res+"");
+        } else if(spinner1.getSelectedItem().toString().equals("Centigrados") && spinner2.getSelectedItem().toString().equals("Rankine")) {
+            res = celsiusToRankine(grado);
+            salida.setText(res+"");
+        } else if(spinner1.getSelectedItem().toString().equals("Fahrenheit") && spinner2.getSelectedItem().toString().equals("Centigrados")) {
+            res = fahrenheitToCelsius(grado);
+            salida.setText(res+"");
+        } else if(spinner1.getSelectedItem().toString().equals("Fahrenheit") && spinner2.getSelectedItem().toString().equals("Kelvin")) {
+            res = fahrenheitToKelvin(grado);
+            salida.setText(res+"");
+        } else if(spinner1.getSelectedItem().toString().equals("Fahrenheit") && spinner2.getSelectedItem().toString().equals("Rankine")) {
+            res = fahrenheitToRankine(grado);
+            salida.setText(res+"");
+        } else if(spinner1.getSelectedItem().toString().equals("Kelvin") && spinner2.getSelectedItem().toString().equals("Centigrados")) {
+            res = kelvinToCelsius(grado);
+            salida.setText(res+"");
+        } else if(spinner1.getSelectedItem().toString().equals("Kelvin") && spinner2.getSelectedItem().toString().equals("Fahrenheit")) {
+            res = kelvinToFahrenheit(grado);
+            salida.setText(res+"");
+        } else if(spinner1.getSelectedItem().toString().equals("Kelvin") && spinner2.getSelectedItem().toString().equals("Rankine")) {
+            res = kelvinToRankine(grado);
+            salida.setText(res+"");
+        } else if(spinner1.getSelectedItem().toString().equals("Rankine") && spinner2.getSelectedItem().toString().equals("Centigrados")) {
+            res = rankineToCelsius(grado);
+            salida.setText(res+"");
+        } else if(spinner1.getSelectedItem().toString().equals("Rankine") && spinner2.getSelectedItem().toString().equals("Fahrenheit")) {
+            res = rankineToFahrenheit(grado);
+            salida.setText(res+"");
+        } else if(spinner1.getSelectedItem().toString().equals("Rankine") && spinner2.getSelectedItem().toString().equals("Kelvin")) {
+            res = rankineToKelvin(grado);
+            salida.setText(res+"");
+        } else if(spinner1.getSelectedItem().toString().equals("Centigrados") && spinner2.getSelectedItem().toString().equals("Centigrados")) {
+            salida.setText(grado+"");
+        } else if(spinner1.getSelectedItem().toString().equals("Fahrenheit") && spinner2.getSelectedItem().toString().equals("Fahrenheit")) {
+            salida.setText(grado+"");
+        } else if(spinner1.getSelectedItem().toString().equals("Kelvin") && spinner2.getSelectedItem().toString().equals("Kelvin")) {
+            salida.setText(grado+"");
+        } else if(spinner1.getSelectedItem().toString().equals("Rankine") && spinner2.getSelectedItem().toString().equals("Rankine")) {
+            salida.setText(grado+"");
+        }
+    }
+
 
 }
