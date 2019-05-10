@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Actividad5</string>
+
+    <string name="txt_lbl_convertir"> Convertir: </string>
+    <string name="txt_lbl_to"> A: </string>
+    <string name="txt_lbl_igual"> = </string>
+
+
+</resources>
